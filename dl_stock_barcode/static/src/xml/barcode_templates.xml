@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <!-- Template Principal OWL -->
+    <t t-name="dl_stock_barcode.ScannerTemplate" owl="1">
+        <div class="dl_barcode_container">
+            <!-- Cabeçalho -->
+            <div class="dl_header">
+                <h1><i class="fa fa-barcode"></i> DL Stock Barcode</h1>
+                <h3 t-esc="state.picking_name"/>
+            </div>
+
+            <!-- Painel de Mensagens (Sucesso/Erro) -->
+            <div t-attf-class="dl_message_box {{ state.messageType }}">
+                <span t-esc="state.message"/>
+            </div>
+
+            <!-- Lista de Produtos Escaneados nesta Sessão -->
+            <div class="dl_lines_container" t-if="state.picking_id || state.location_id">
+                <table class="table table-striped dl_table" t-if="state.lines.length > 0">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Qtd Lida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="state.lines" t-as="line" t-key="line.product_id">
+                            <td><t t-esc="line.name"/></td>
+                            <td class="dl_qty"><t t-esc="line.qty"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div t-if="state.lines.length == 0" class="text-center p-4 text-muted">
+                    <h5>Pronto para adicionar produtos.</h5>
+                </div>
+
+                <!-- Botões de Ação na Tela -->
+                <div class="dl_action_buttons mt-4 text-center">
+                    <button class="btn btn-success btn-lg mx-2" t-on-click="(ev) => this.onCommandBtn('O-CMD-VALIDATE', ev)">
+                        <i class="fa fa-check"></i> Validar
+                    </button>
+                    <button class="btn btn-danger btn-lg mx-2" t-on-click="(ev) => this.onCommandBtn('O-CMD-CANCEL', ev)">
+                        <i class="fa fa-times"></i> Cancelar
+                    </button>
+                    <button class="btn btn-secondary btn-lg mx-2" t-on-click="(ev) => this.onCommandBtn('O-CMD-PRINT', ev)">
+                        <i class="fa fa-print"></i> Imprimir Guia
+                    </button>
+                </div>
+            </div>
+
+            <!-- Instruções Visuais na Tela Inicial -->
+            <div class="dl_instructions" t-if="!state.picking_id and !state.location_id">
+                <p>Aponte o leitor para o código de barras de uma Transferência Tipo de Operação ou Localização.</p>
+                <div class="dl_scan_animation">
+                    <i class="fa fa-qrcode fa-4x"></i>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
