@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Stock Barcode Integration',
-    'version': '17.0.1.0.0',
+    'version': '16.0.1.0.0',
     'summary': 'Gestão e leitura avançada de códigos de barras para picking e stock',
     'description': """
         Módulo desenvolvido pela DIGITALUB para otimização de leitura de códigos de barras no Odoo 17.
