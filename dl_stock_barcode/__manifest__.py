@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Digitalub Stock Barcode Integration',
+    'name': 'Stock Barcode Integration',
     'version': '17.0.1.0.0',
     'summary': 'Gestão e leitura avançada de códigos de barras para picking e stock',
     'description': """
@@ -9,13 +9,13 @@
         - Interface otimizada para picking.
         - Estilos e templates customizados.
     """,
-    'author': 'DIGITALUB',
+    'author': 'DIGITALUB ANGOLA, LDA',
     'website': 'https://www.digitalub.ao',
     'category': 'Inventory/Inventory',
     'license': 'OPL-1',
 
-   
-    'price': 65.00,
+    # Preço atualizado
+    'price': 60.00,
     'currency': 'EUR',
     
     # Dependências do módulo
@@ -31,7 +31,6 @@
         'views/barcode_menu_views.xml',
     ],
 
-   
     'assets': {
         'web.assets_backend': [
             'dl_stock_barcode/static/src/css/barcode_styles.css',
@@ -42,9 +41,9 @@
         ],
     },
 
-    # Parâmetros de destaque na loja
+    # CORREÇÃO AQUI: Apontar para o ficheiro de imagem correto que está no seu servidor
     'images': [
-        'static/description/banner.png'
+        'static/description/main_screenshot.png'
     ],
     'installable': True,
     'application': True,
