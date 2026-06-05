@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Etiquetas de Comandos - DL Stock Barcode</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .label-container {
+            border: 2px dashed #ccc;
+            display: inline-block;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        svg {
+            width: 100%;
+        }
+        @media print {
+            .no-print {
+                display: none;
+            }
+            .label-container {
+                border: 1px solid #000;
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print">
+        <h1>Comandos de Operação de Armazém</h1>
+        <p>Imprima esta página (Ctrl+P) para ter os códigos de barras de comando colados perto do computador.</p>
+        <button onclick="window.print()" style="padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #714B67; color: white; border: none; border-radius: 5px;">Imprimir Etiquetas</button>
+        <br><br>
+    </div>
+
+    <!-- Etiqueta de Validar -->
+    <div class="label-container">
+        <h2>VALIDAR TRANSFERÊNCIA</h2>
+        <p>Lê a guia, valida os artigos e conclui a operação</p>
+        <svg id="barcode-validate"></svg>
+    </div>
+
+    <!-- Etiqueta de Cancelar -->
+    <div class="label-container">
+        <h2>CANCELAR TRANSFERÊNCIA</h2>
+        <p>Cancela a operação atual</p>
+        <svg id="barcode-cancel"></svg>
+    </div>
+
+    <!-- Etiqueta de Imprimir -->
+    <div class="label-container">
+        <h2>IMPRIMIR GUIA</h2>
+        <p>Inicia a impressão do documento PDF da Guia</p>
+        <svg id="barcode-print"></svg>
+    </div>
+
+    <script>
+        // Gerar os códigos de barras quando a página carregar
+        JsBarcode("#barcode-validate", "O-CMD-VALIDATE", {
+            format: "CODE128",
+            width: 3,
+            height: 100,
+            displayValue: true,
+            fontSize: 20,
+            textMargin: 10
+        });
+
+        JsBarcode("#barcode-cancel", "O-CMD-CANCEL", {
+            format: "CODE128",
+            width: 3,
+            height: 100,
+            displayValue: true,
+            fontSize: 20,
+            textMargin: 10
+        });
+
+        JsBarcode("#barcode-print", "O-CMD-PRINT", {
+            format: "CODE128",
+            width: 3,
+            height: 100,
+            displayValue: true,
+            fontSize: 20,
+            textMargin: 10
+        });
+    </script>
+</body>
+</html>

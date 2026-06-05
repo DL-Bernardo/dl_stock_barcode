@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Define a Ação do Cliente que vai chamar o nosso JavaScript/OWL -->
+    <record id="action_dl_stock_barcode" model="ir.actions.client">
+        <field name="name">Scanner de Inventário</field>
+        <field name="tag">dl_stock_barcode_action</field>
+        <field name="target">fullscreen</field> <!-- Tela cheia para facilitar no tablet/celular -->
+    </record>
+
+    <!-- Adiciona o Menu no aplicativo nativo de Inventário do Odoo -->
+    <menuitem id="menu_dl_stock_barcode"
+              name="Barcode Scanner"
+              parent="stock.menu_stock_root"
+              action="action_dl_stock_barcode"
+              sequence="10"/>
+</odoo>
