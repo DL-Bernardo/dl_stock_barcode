@@ -1,60 +1,143 @@
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan" style="color:#714B67;">Gestão de Inventário com Código de Barras</h2>
-        <h3 class="oe_slogan">Acelere as operações de armazém na versão Community!</h3>
-        <div class="oe_span12 text-center">
-            <p class="oe_mt32" style="font-size: 1.2em;">
-                O <b>DL Stock Barcode</b> traz a agilidade necessária para o chão de fábrica e armazéns.
-                Com uma interface moderna desenvolvida em OWL (Odoo Web Library), permite pesquisar transferências,
-                adicionar quantidades e validar guias usando apenas o leitor de códigos de barras.
-            </p>
-        </div>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitalub Stock Barcode Integration</title>
+    <!-- Importação de fontes modernas para o layout da loja -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .dl-container {
+            font-family: 'Inter', sans-serif !important;
+            color: #2c3e50;
+        }
+        .dl-title {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 700 !important;
+        }
+        .dl-accent-color {
+            color: #714B67 !important;
+        }
+        .dl-bg-accent {
+            background-color: #714B67 !important;
+            border-color: #714B67 !important;
+        }
+        .dl-card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            background: #ffffff;
+            transition: transform 0.2s;
+        }
+        .dl-card:hover {
+            transform: translateY(-5px);
+        }
+        .dl-list-item {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            list-style-type: none;
+            position: relative;
+            padding-left: 30px;
+        }
+        .dl-list-item::before {
+            content: "\f00c";
+            font-family: "FontAwesome";
+            position: absolute;
+            left: 0;
+            color: #714B67;
+        }
+    </style>
+</head>
+<body>
 
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <h3 class="oe_slogan" style="color:#212529;">Principais Benefícios</h3>
-        <div class="oe_span4 text-center mt-4">
-            <i class="fa fa-tachometer fa-4x" style="color: #714B67;"></i>
-            <h4 class="oe_mt16">Aumento de Produtividade</h4>
-            <p>Reduza o tempo gasto com preenchimento manual de dados. Faça scan aos produtos e as quantidades somam automaticamente.</p>
+<div class="container-fluid dl-container">
+    <!-- Secção de Introdução -->
+    <section class="oe_container px-3 py-5">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="oe_slogan dl-title dl-accent-color mb-3" style="font-size: 2.5rem;">Gestão de Inventário com Código de Barras</h2>
+                <h3 class="oe_slogan text-muted mb-4" style="font-size: 1.5rem;">Acelere as operações de armazém na versão Community!</h3>
+            </div>
+            <div class="col-lg-8 offset-lg-2">
+                <p class="lead text-secondary" style="font-size: 1.25rem; line-height: 1.8;">
+                    O <strong>DL Stock Barcode</strong> traz a agilidade necessária para o chão de fábrica e armazéns.
+                    Com uma interface moderna desenvolvida em OWL (Odoo Web Library), permite pesquisar transferências,
+                    adicionar quantidades e validar guias usando apenas o leitor de códigos de barras.
+                </p>
+            </div>
         </div>
-        <div class="oe_span4 text-center mt-4">
-            <i class="fa fa-volume-up fa-4x" style="color: #714B67;"></i>
-            <h4 class="oe_mt16">Feedback Sonoro (Beep)</h4>
-            <p>O sistema emite alertas sonoros agudos para sucesso e graves para erro, permitindo ao operador trabalhar sem olhar para a tela.</p>
-        </div>
-        <div class="oe_span4 text-center mt-4">
-            <i class="fa fa-bolt fa-4x" style="color: #714B67;"></i>
-            <h4 class="oe_mt16">Comandos Rápidos</h4>
-            <p>Imprima códigos de ação como <b>O-CMD-VALIDATE</b>. Leia esse código e valide a guia instantaneamente.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <h3 class="oe_slogan" style="color:#212529;">Como Funciona?</h3>
-        <div class="oe_span12">
-            <ul>
-                <li style="font-size: 1.1em; margin-bottom: 10px;"><b>1. Ecrã Ativo:</b> A janela tem de ser a janela principal do computador para ler. Se clicar noutra aba, não fará a leitura.</li>
-                <li style="font-size: 1.1em; margin-bottom: 10px;"><b>2. Abertura Rápida:</b> Faça o scan do número de uma guia (ex: WH/IN/0001) para que o sistema a abra imediatamente.</li>
-                <li style="font-size: 1.1em; margin-bottom: 10px;"><b>3. Scan de Produto:</b> Cada scan num código de barras de produto adiciona +1 na quantidade da transferência.</li>
-                <li style="font-size: 1.1em; margin-bottom: 10px;"><b>4. Etiquetas Ocultas:</b> Abra o ficheiro <code>etiquetas_comandos.html</code> incluído neste módulo no seu browser e imprima os códigos mágicos de validação ou cancelamento para colocar no armazém.</li>
-            </ul>
+    <!-- Secção de Benefícios -->
+    <section class="oe_container oe_dark px-3 py-5" style="background-color: #f8f9fa; border-radius: 12px;">
+        <div class="row text-center">
+            <div class="col-12 mb-5">
+                <h3 class="oe_slogan dl-title text-dark" style="font-size: 2rem;">Principais Benefícios</h3>
+            </div>
+            
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="p-4 dl-card w-100">
+                    <i class="fa fa-tachometer fa-3x dl-accent-color mb-3"></i>
+                    <h4 class="dl-title mb-3" style="font-size: 1.25rem;">Aumento de Produtividade</h4>
+                    <p class="text-muted">Reduza o tempo gasto com preenchimento manual de dados. Faça scan aos produtos e as quantidades somam automaticamente.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="p-4 dl-card w-100">
+                    <i class="fa fa-volume-up fa-3x dl-accent-color mb-3"></i>
+                    <h4 class="dl-title mb-3" style="font-size: 1.25rem;">Feedback Sonoro (Beep)</h4>
+                    <p class="text-muted">O sistema emite alertas sonoros agudos para sucesso e graves para erro, permitindo ao operador trabalhar sem olhar para a tela.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="p-4 dl-card w-100">
+                    <i class="fa fa-bolt fa-3x dl-accent-color mb-3"></i>
+                    <h4 class="dl-title mb-3" style="font-size: 1.25rem;">Comandos Rápidos</h4>
+                    <p class="text-muted">Imprima códigos de ação como <strong>O-CMD-VALIDATE</strong>. Leia esse código e valide a guia instantaneamente.</p>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced text-center">
-        <h2 class="oe_slogan">Precisa de Suporte ou Funcionalidades Extra?</h2>
-        <p class="oe_mt16" style="font-size: 1.1em;">
-            Oferecemos suporte técnico e desenvolvimento de módulos à medida.
-        </p>
-        <div class="oe_mt32">
-            <a href="mailto:suporte@digitalub.ao" class="btn btn-primary btn-lg" style="background-color: #714B67; border-color: #714B67;"><i class="fa fa-envelope"></i> Contacte-nos</a>
+    <!-- Secção Como Funciona -->
+    <section class="oe_container px-3 py-5">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h3 class="oe_slogan dl-title text-dark" style="font-size: 2rem;">Como Funciona?</h3>
+            </div>
+            <div class="col-lg-10 offset-lg-1">
+                <ul class="p-0">
+                    <li class="dl-list-item text-secondary"><strong>1. Ecrã Ativo:</strong> A janela tem de ser a janela principal do computador para ler. Se clicar noutra aba, não fará a leitura.</li>
+                    <li class="dl-list-item text-secondary"><strong>2. Abertura Rápida:</strong> Faça o scan do número de uma guia (ex: WH/IN/0001) para que o sistema a abra imediatamente.</li>
+                    <li class="dl-list-item text-secondary"><strong>3. Scan de Produto:</strong> Cada scan num código de barras de produto adiciona +1 na quantidade da transferência.</li>
+                    <li class="dl-list-item text-secondary"><strong>4. Etiquetas Ocultas:</strong> Abra o ficheiro <code>etiquetas_comandos.html</code> incluído neste módulo no seu browser e imprima os códigos mágicos de validação ou cancelamento para colocar no armazém.</li>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Secção de Suporte -->
+    <section class="oe_container oe_dark text-center px-3 py-5" style="background-color: #f8f9fa; border-radius: 12px; border-top: 3px solid #714B67;">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="oe_slogan dl-title mb-3" style="font-size: 2rem;">Precisa de Suporte ou Funcionalidades Extra?</h2>
+                <p class="lead text-muted mb-4" style="font-size: 1.10rem;">
+                    Oferecemos suporte técnico e desenvolvimento de módulos à medida.
+                </p>
+                <div>
+                    <a href="mailto:suporte@digitalub.ao" class="btn btn-primary btn-lg dl-bg-accent shadow px-4 py-3" style="font-weight: 500; border-radius: 30px;">
+                        <i class="fa fa-envelope mr-2"></i> Contacte-nos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
