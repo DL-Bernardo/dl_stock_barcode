@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Stock Barcode Integration',
-    'version': '17.0.1.0.0',
-    'summary': 'Gestão e leitura avançada de códigos de barras para picking e stock',
+    'name': 'Stock Barcode Integration (Scanner de Inventário)',
+    'version': '17.0.1.0.1',
+    'summary': 'Gestão e leitura avançada de códigos de barras para picking, transferências e inventário',
     'description': """
-        Módulo desenvolvido pela DIGITALUB para otimização de leitura de códigos de barras no Odoo 17.
-        - Suporte a nomenclaturas personalizadas.
-        - Interface otimizada para picking.
-        - Estilos e templates customizados.
+        Módulo desenvolvido pela DIGITALUB para otimização de leitura de códigos de barras no Odoo 17 Community & Enterprise.
+        - Interface moderna e veloz desenvolvida em OWL.
+        - Leitura contínua rápida com incremento automático (+1 Qty).
+        - Comandos de ação rápida por código de barras (Validar, Cancelar, Imprimir).
+        - Alertas sonoros com feedback instantâneo (Beep/Buzzer).
+        - Nomenclaturas personalizadas e busca inteligente de transferências.
     """,
     'author': 'DIGITALUB ANGOLA, LDA',
     'website': 'https://www.digitalub.ao',
+    'support': 'suporte@digitalub.ao',
     'category': 'Inventory/Inventory',
     'license': 'OPL-1',
 
@@ -41,8 +44,8 @@
         ],
     },
 
-    # CORREÇÃO AQUI: Apontar para o ficheiro de imagem correto que está no seu servidor
     'images': [
+        'static/description/banner.png',
         'static/description/main_screenshot.png'
     ],
     'installable': True,
