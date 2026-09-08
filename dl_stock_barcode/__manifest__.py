@@ -1,13 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Stock Barcode Integration',
-    'version': '18.0.1.0.0',
-    'summary': 'Gestão e leitura avançada de códigos de barras para picking e stock',
-    'description': """
-        Módulo desenvolvido pela DIGITALUB para otimização de leitura de códigos de barras no Odoo 17.
-        - Suporte a nomenclaturas personalizadas.
-        - Interface otimizada para picking.
-        - Estilos e templates customizados.
+    'name': 'Mobile Stock Barcode Scanner for Community',
+    'version': '18.0.1.0.1',
+    'summary': 'Zero Hardware Lock-in Mobile Barcode Scanning, Real-time Inventory & Fast Picking Automation',
+        'description': """
+        Professional Barcode Scanner & Picking Management for Odoo Community & Enterprise.
+        - High-speed reactive OWL scanning console.
+        - Real-time continuous scanning with automatic quantity increment (+1 Qty).
+        - Hands-free Action Command Barcodes (Validate, Cancel, Print).
+        - Acoustic audio feedback with distinct success/warning sound frequencies.
+        - Custom barcode nomenclature support and instant transfer lookup.
+        - 100% Community & Odoo.sh ready with zero server dependencies.
     """,
     'author': 'DIGITALUB ANGOLA, LDA',
     'website': 'https://www.digitalub.ao',
@@ -15,7 +18,7 @@
     'license': 'OPL-1',
 
     # Preço atualizado
-    'price': 60.00,
+    'price': 45.0,
     'currency': 'EUR',
     
     # Dependências do módulo
@@ -43,6 +46,7 @@
 
     # CORREÇÃO AQUI: Apontar para o ficheiro de imagem correto que está no seu servidor
     'images': [
+        'static/description/banner.png',
         'static/description/main_screenshot.png'
     ],
     'installable': True,
