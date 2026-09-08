@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Mobile Stock Barcode Scanner for Community',
-    'version': '18.0.1.0.2',
+    'version': '18.0.1.0.3',
     'summary': 'Zero Hardware Lock-in Mobile Barcode Scanning, Real-time Inventory & Fast Picking Automation',
         'description': """
         Professional Barcode Scanner & Picking Management for Odoo Community & Enterprise.
@@ -18,7 +18,7 @@
     'license': 'OPL-1',
 
     # Preço atualizado
-    'price': 45.0,
+    'price': 49.0,
     'currency': 'EUR',
     
     # Dependências do módulo
