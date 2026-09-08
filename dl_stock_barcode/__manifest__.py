@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Stock Barcode Scanner & Picking Automation',
-    'version': '17.0.1.0.2',
-    'summary': 'Fast barcode scanning, picking automation, inventory transfers & physical counting with acoustic feedback',
+    'name': 'Mobile Stock Barcode Scanner for Community',
+    'version': '17.0.1.0.3',
+    'summary': 'Zero Hardware Lock-in Mobile Barcode Scanning, Real-time Inventory & Fast Picking Automation',
     'description': """
         Professional Barcode Scanner & Picking Management for Odoo 17 Community & Enterprise.
         - High-speed reactive OWL scanning console.
@@ -19,7 +19,7 @@
     'license': 'OPL-1',
 
     # Preço atualizado
-    'price': 60.00,
+    'price': 45.0,
     'currency': 'EUR',
     
     # Dependências do módulo
