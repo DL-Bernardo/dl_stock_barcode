@@ -6,6 +6,7 @@ import { useService } from "@web/core/utils/hooks";
 
 export class BarcodeScannerAction extends Component {
     static template = "dl_stock_barcode.ScannerTemplate";
+    static props = { "*": true };
 
     setup() {
         this.orm = useService("orm");
