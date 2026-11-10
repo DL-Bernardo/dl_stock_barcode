@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Mobile Stock Barcode Scanner for Community',
-    'version': '16.0.1.0.6',
+    'version': '16.0.1.0.9',
     'summary': 'Zero Hardware Lock-in Mobile Barcode Scanning, Real-time Inventory & Fast Picking Automation',
-        'description': """
-        Professional Barcode Scanner & Picking Management for Odoo Community & Enterprise.
+    'description': """
+        Professional Barcode Scanner & Picking Management for Odoo 15, 16, 17, 18, 19 & 20 (Community & Enterprise).
         - High-speed reactive OWL scanning console.
         - Real-time continuous scanning with automatic quantity increment (+1 Qty).
         - Hands-free Action Command Barcodes (Validate, Cancel, Print).
@@ -14,39 +14,32 @@
     """,
     'author': 'DIGITALUB ANGOLA, LDA',
     'website': 'https://www.digitalub.ao',
+    'support': 'suporte@digitalub.ao',
     'category': 'Inventory/Inventory',
     'license': 'OPL-1',
-
-    # Preço atualizado
     'price': 49.0,
     'currency': 'USD',
-    
-    # Dependências do módulo
     'depends': [
         'base',
         'stock',
         'barcodes',
     ],
-
-    # Ficheiros XML carregados no arranque
     'data': [
         'data/barcode_nomenclature_data.xml',
         'views/barcode_menu_views.xml',
     ],
-
     'assets': {
         'web.assets_backend': [
             'dl_stock_barcode/static/src/css/barcode_styles.css',
             'dl_stock_barcode/static/src/js/barcode_picking_model.js',
-        ],
-        'web.assets_qweb': [
             'dl_stock_barcode/static/src/xml/barcode_templates.xml',
         ],
     },
-
-    # CORREÇÃO AQUI: Apontar para o ficheiro de imagem correto que está no seu servidor
     'images': [
         'static/description/banner.png',
+        'static/description/step1_barcode_config.png',
+        'static/description/step2_barcode_scan.png',
+        'static/description/step3_barcode_validate.png',
     ],
     'installable': True,
     'application': True,
