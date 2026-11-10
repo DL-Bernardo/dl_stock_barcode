@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
     <!-- Template Principal OWL -->
-    <t t-name="dl_stock_barcode.ScannerTemplate" owl="1">
+    <t t-name="dl_stock_barcode.ScannerTemplate">
         <div class="dl_barcode_container">
             <!-- Cabeçalho -->
             <div class="dl_header">
