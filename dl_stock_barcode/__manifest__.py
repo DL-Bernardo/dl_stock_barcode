@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Mobile Stock Barcode Scanner for Community',
-    'version': '17.0.1.0.9',
+    'version': '15.0.1.0.9',
     'summary': 'Zero Hardware Lock-in Mobile Barcode Scanning, Real-time Inventory & Fast Picking Automation',
     'description': """
         Professional Barcode Scanner & Picking Management for Odoo 15, 16, 17, 18, 19 & 20 (Community & Enterprise).
@@ -29,10 +29,11 @@
         'views/barcode_menu_views.xml',
     ],
     'assets': {
+        'web.assets_qweb': ['dl_stock_barcode/static/src/xml/barcode_templates.xml'],
         'web.assets_backend': [
             'dl_stock_barcode/static/src/css/barcode_styles.css',
             'dl_stock_barcode/static/src/js/barcode_picking_model.js',
-            'dl_stock_barcode/static/src/xml/barcode_templates.xml',
+            
         ],
     },
     'images': [
